@@ -36,5 +36,10 @@ class MainActivity : AppCompatActivity() {
          * Show Short Toast Message
          */
         showShortToast("Hello World !!!")
+
+        /**
+         * Logger
+         */
+        loggerD("Hello World !!!")
     }
 }
