@@ -3,6 +3,7 @@ package com.pramod.kotlinhelpers
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.pramod.kotlinhelpers.Toaster.showShortToast
 
 /**
  * Created by PRAMOD SELVARAJ on 25-03-2019.
@@ -30,5 +31,10 @@ class MainActivity : AppCompatActivity() {
 
         val textView: TextView = findViewById(R.id.id_hello_world)
         textView.text = message
+
+        /**
+         * Show Short Toast Message
+         */
+        showShortToast("Hello World !!!")
     }
 }
