@@ -1,6 +1,8 @@
 package com.pramod.kotlinhelpers
 
 import android.app.Application
+import com.crashlytics.android.Crashlytics
+import io.fabric.sdk.android.Fabric
 
 /**
  * Created by PRAMOD SELVARAJ on 25-03-2019.
@@ -13,5 +15,10 @@ class KotlinHelperApplication : Application() {
          * Initialise Preference Storage
          */
         PreferenceStorage.init(this)
+
+        /**
+         * Initialise Crashlytics
+         */
+        Fabric.with(this, Crashlytics())
     }
 }

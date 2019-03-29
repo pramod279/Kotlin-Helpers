@@ -6,3 +6,5 @@ Kotlin Helper Classes
 3) Toast Helper
 4) Logger Helper
 5) Network Connectivity Helper
+6) Crashlytics
+7) Firebase Crashlytics
