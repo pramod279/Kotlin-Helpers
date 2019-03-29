@@ -2,7 +2,6 @@ package com.pramod.kotlinhelpers
 
 import android.os.Bundle
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import com.pramod.kotlinhelpers.Toaster.showShortToast
 
 /**
@@ -10,7 +9,7 @@ import com.pramod.kotlinhelpers.Toaster.showShortToast
  * This class shows how to Save & Retrieve values from Preference Storage
  */
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
