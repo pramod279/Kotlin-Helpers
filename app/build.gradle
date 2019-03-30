@@ -7,6 +7,10 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'io.fabric'
 apply plugin: 'com.google.gms.google-services'
 
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
 android {
     compileSdkVersion build_version.target_sdk
 
@@ -16,6 +20,17 @@ android {
         targetSdkVersion build_version.target_sdk
         versionCode app_info.release_version_code
         versionName app_info.release_version_name
+    }
+
+    signingConfigs {
+        config {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
     }
 
     buildTypes {
