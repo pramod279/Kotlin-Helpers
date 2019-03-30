@@ -9,6 +9,11 @@ def app_info = [:]
 app_info.applicationID = "com.pramod.kotlinhelpers"
 
 /**
+ * Application Name
+ */
+app_info.applicationName = "Kotlin-Helper"
+
+/**
  * Debug Build Version Information
  */
 app_info.debug_version_code = 1

@@ -1,9 +1,6 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
-
 apply plugin: 'io.fabric'
 apply plugin: 'com.google.gms.google-services'
 
@@ -20,11 +17,10 @@ android {
         targetSdkVersion build_version.target_sdk
         versionCode app_info.release_version_code
         versionName app_info.release_version_name
-        flavorDimensions "default"
     }
 
     signingConfigs {
-        release {
+        releaseConfig {
             keyAlias keystoreProperties['keyAlias']
             keyPassword keystoreProperties['keyPassword']
             storeFile file(keystoreProperties['storeFile'])
@@ -36,8 +32,39 @@ android {
 
     buildTypes {
         release {
+            debuggable false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
+
+    // Specifies one flavor dimension.
+    flavorDimensions "default"
+    productFlavors {
+        /*Development Flavor*/
+        develop {
+            versionNameSuffix " - Develop"
+            signingConfig signingConfigs.releaseConfig
+        }
+
+        /*QA Flavor*/
+        staging {
+            versionNameSuffix " - QA"
+            signingConfig signingConfigs.releaseConfig
+        }
+
+        /*Production Flavor*/
+        production {
+            versionNameSuffix " - Production"
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
+
+    /*APK Name*/
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "$app_info.applicationName - v${variant.versionName}.apk"
         }
     }
 }
@@ -50,7 +77,8 @@ dependencies {
     implementation(deps.androidKTX.KTX)
     /*Support Library Declarations*/
     implementation(deps.android_x.appcompat)
-    /*Constraint Layout Library*/
+    implementation(deps.android_x.recyclerview)
+    implementation(deps.android_x.cardview)
     implementation(deps.android_x.constraintLayout)
     /*Crashlytics Support Libraries --> Fabrics & Firebase*/
     implementation(deps.crashlytics.firebaseCrash)

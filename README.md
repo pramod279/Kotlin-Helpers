@@ -8,3 +8,4 @@ Kotlin Helper Classes
 5) Network Connectivity Helper
 6) Crashlytics
 7) Firebase Crashlytics
+8) Gradle Setup & Flavouring
