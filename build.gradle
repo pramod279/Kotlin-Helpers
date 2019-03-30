@@ -1,25 +1,26 @@
 buildscript {
-    ext.kotlin_version = '1.3.21'
+    /*App Version Information*/
+    apply from: 'appInfo.gradle'
+    /*App Dependency Information*/
+    apply from: 'dependency.gradle'
+    addRepos(repositories)
+
+    dependencies {
+        classpath deps.android_gradle_plugin
+        classpath deps.kotlin_gradle_plugin
+        classpath deps.fabric_plugin
+        classpath deps.google_services_plugin
+    }
+
     repositories {
         google()
         jcenter()
         maven { url 'https://maven.fabric.io/public' }
     }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'io.fabric.tools:gradle:1.28.1'
-        classpath 'com.google.gms:google-services:4.1.0'
-    }
 }
 
 allprojects {
-    repositories {
-        google()
-        jcenter()
-        
-    }
+    addRepos(repositories)
 }
 
 task clean(type: Delete) {

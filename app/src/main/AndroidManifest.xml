@@ -21,18 +21,18 @@
                 android:name="io.fabric.ApiKey"
                 android:value="27ce137ecef877af637f2fb19d862efb6c2d9d37"/>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".modules.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".BaseActivity"/>
+        <activity android:name=".modules.base.BaseActivity"/>
 
         <!-- Network State Change Receiver -->
         <receiver
-                android:name=".NetworkReceiver"
+                android:name=".common.utils.NetworkReceiver"
                 android:enabled="true">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>

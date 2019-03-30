@@ -1,4 +1,4 @@
-package com.pramod.kotlinhelpers
+package com.pramod.kotlinhelpers.common.utils
 
 import android.content.Context
 import android.widget.Toast

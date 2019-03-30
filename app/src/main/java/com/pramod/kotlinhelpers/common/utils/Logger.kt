@@ -1,7 +1,8 @@
-package com.pramod.kotlinhelpers
+package com.pramod.kotlinhelpers.common.utils
 
 import android.app.Activity
 import android.util.Log
+import com.pramod.kotlinhelpers.BuildConfig
 
 /**
  * Created by PRAMOD SELVARAJ on 25-03-2019.

@@ -1,8 +1,9 @@
-package com.pramod.kotlinhelpers
+package com.pramod.kotlinhelpers.common.utils
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
+import com.pramod.kotlinhelpers.R
 
 /**
  * Created by PRAMOD SELVARAJ on 25-03-2019.
@@ -19,7 +20,11 @@ object PreferenceStorage {
     private var editor: Editor? = null
 
     fun init(context: Context) {
-        init(context, context.getString(R.string.app_name), Context.MODE_PRIVATE)
+        init(
+            context,
+            context.getString(R.string.app_name),
+            Context.MODE_PRIVATE
+        )
     }
 
     private fun init(context: Context, preferenceName: String, mode: Int) {

@@ -1,10 +1,11 @@
-package com.pramod.kotlinhelpers
+package com.pramod.kotlinhelpers.modules.base
 
 import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.pramod.kotlinhelpers.Toaster.showShortToast
+import com.pramod.kotlinhelpers.common.utils.NetworkReceiver
+import com.pramod.kotlinhelpers.common.utils.Toaster.showShortToast
 
 /**
  * Created by PRAMOD SELVARAJ on 25-03-2019.

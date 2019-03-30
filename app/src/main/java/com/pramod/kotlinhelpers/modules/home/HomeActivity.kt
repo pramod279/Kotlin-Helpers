@@ -1,7 +1,12 @@
-package com.pramod.kotlinhelpers
+package com.pramod.kotlinhelpers.modules.home
 
 import android.os.Bundle
-import com.pramod.kotlinhelpers.Toaster.showShortToast
+import com.pramod.kotlinhelpers.R
+import com.pramod.kotlinhelpers.common.constants.PreferenceConstants
+import com.pramod.kotlinhelpers.common.utils.PreferenceStorage
+import com.pramod.kotlinhelpers.common.utils.Toaster.showShortToast
+import com.pramod.kotlinhelpers.common.utils.loggerD
+import com.pramod.kotlinhelpers.modules.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -9,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_main.*
  * This class shows how to Save & Retrieve values from Preference Storage
  */
 
-class MainActivity : BaseActivity() {
+class HomeActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
