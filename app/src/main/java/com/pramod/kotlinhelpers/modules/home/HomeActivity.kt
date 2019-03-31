@@ -30,7 +30,7 @@ class HomeActivity : BaseActivity() {
         /**
          * Hide Progress Indicator
          */
-        hideProgress()
+        //hideProgress()
 
         /**
          * Load Image URL Using Glide

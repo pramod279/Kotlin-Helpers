@@ -1,5 +1,6 @@
 package com.pramod.kotlinhelpers.common.utils
 
+import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Context
 import android.graphics.Color
@@ -17,6 +18,8 @@ object ProgressIndicator {
      */
     fun showLoadingIndicator(context: Context?): ProgressDialog {
         val progressDialog = ProgressDialog(context)
+        if (context is Activity && !context.isFinishing)
+            progressDialog.show()
         progressDialog.let {
             it.show()
             it.window?.setBackgroundDrawable(Color.TRANSPARENT.toDrawable())
