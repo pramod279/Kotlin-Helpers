@@ -5,10 +5,7 @@ package com.pramod.kotlinhelpers.common.constants
  * This class stores the Preference Storage Key Values
  */
 
-class PreferenceConstants {
-
-    companion object {
-        const val PREF_NAME: String = "PREF_NAME"
-        const val PREF_AGE: String = "PREF_AGE"
-    }
+object PreferenceConstants {
+    const val PREF_NAME: String = "PREF_NAME"
+    const val PREF_AGE: String = "PREF_AGE"
 }

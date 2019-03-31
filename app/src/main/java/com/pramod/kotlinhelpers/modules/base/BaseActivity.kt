@@ -1,10 +1,12 @@
 package com.pramod.kotlinhelpers.modules.base
 
+import android.app.ProgressDialog
 import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.pramod.kotlinhelpers.common.utils.NetworkReceiver
+import com.pramod.kotlinhelpers.common.utils.ProgressIndicator
 import com.pramod.kotlinhelpers.common.utils.Toaster.showShortToast
 
 /**
@@ -14,7 +16,9 @@ import com.pramod.kotlinhelpers.common.utils.Toaster.showShortToast
  * 1) Network State Change Receivers
  */
 
-open class BaseActivity : AppCompatActivity(), NetworkReceiver.ConnectivityReceiverListener {
+abstract class BaseActivity : AppCompatActivity(), BaseViews, NetworkReceiver.ConnectivityReceiverListener {
+
+    private var progressDialog: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,5 +44,20 @@ open class BaseActivity : AppCompatActivity(), NetworkReceiver.ConnectivityRecei
      */
     private fun isOnline(isConnected: Boolean) {
         return if (isConnected) showShortToast("You are Online !!!") else showShortToast("You are Offline !!!")
+    }
+
+    /**
+     * Show Progress Dialog
+     */
+    override fun showProgress() {
+        hideProgress()
+        progressDialog = ProgressIndicator.showLoadingIndicator(this)
+    }
+
+    /**
+     * Dismiss Progress Dialog
+     */
+    override fun hideProgress() {
+        progressDialog?.let { if (it.isShowing) it.cancel() }
     }
 }
