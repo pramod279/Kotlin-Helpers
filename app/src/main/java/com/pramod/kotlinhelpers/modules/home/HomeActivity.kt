@@ -5,6 +5,7 @@ import com.pramod.kotlinhelpers.R
 import com.pramod.kotlinhelpers.common.constants.PreferenceConstants
 import com.pramod.kotlinhelpers.common.utils.PreferenceStorage
 import com.pramod.kotlinhelpers.common.utils.Toaster.showShortToast
+import com.pramod.kotlinhelpers.common.utils.loadGlideImage
 import com.pramod.kotlinhelpers.common.utils.loggerD
 import com.pramod.kotlinhelpers.modules.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,7 +21,23 @@ class HomeActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /**
+         * Show Progress Indicator
+         */
         showProgress()
+
+        /**
+         * Hide Progress Indicator
+         */
+        hideProgress()
+
+        /**
+         * Load Image URL Using Glide
+         */
+        glideImageView.loadGlideImage(
+            "https://crackberry.com/sites/crackberry.com" +
+                    "/files/topic_images/2013/ANDROID.png", R.drawable.ic_launcher_background
+        )
 
         /**
          * Saving Values to Preference Storage

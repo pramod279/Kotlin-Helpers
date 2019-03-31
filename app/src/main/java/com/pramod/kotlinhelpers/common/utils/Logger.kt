@@ -6,7 +6,7 @@ import com.pramod.kotlinhelpers.BuildConfig
 
 /**
  * Created by PRAMOD SELVARAJ on 25-03-2019.
- * This is the Logger Helper File
+ * This is the Logger Helper Extension
  */
 
 /**

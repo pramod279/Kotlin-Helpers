@@ -9,3 +9,4 @@ Kotlin Helper Classes
 6) Crashlytics
 7) Firebase Crashlytics
 8) Gradle Setup & Flavouring
+9) Glide Image Loader

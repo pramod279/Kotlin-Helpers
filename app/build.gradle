@@ -80,6 +80,7 @@ dependencies {
     implementation(deps.android_x.recyclerview)
     implementation(deps.android_x.cardview)
     implementation(deps.android_x.constraintLayout)
+    implementation(deps.android_x.glide)
     /*Crashlytics Support Libraries --> Fabrics & Firebase*/
     implementation(deps.crashlytics.firebaseCrash)
     implementation("com.crashlytics.sdk.android:crashlytics:$deps_version.crashlytics") {
