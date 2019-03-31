@@ -29,14 +29,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Network State Change Receiver -->
-        <receiver
-                android:name=".common.utils.NetworkReceiver"
-                android:enabled="true">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-            </intent-filter>
-        </receiver>
     </application>
 
 </manifest>

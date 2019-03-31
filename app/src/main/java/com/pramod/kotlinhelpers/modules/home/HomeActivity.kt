@@ -1,6 +1,7 @@
 package com.pramod.kotlinhelpers.modules.home
 
 import android.os.Bundle
+import android.view.View
 import com.pramod.kotlinhelpers.R
 import com.pramod.kotlinhelpers.common.constants.PreferenceConstants
 import com.pramod.kotlinhelpers.common.utils.PreferenceStorage
@@ -34,7 +35,7 @@ class HomeActivity : BaseActivity() {
         /**
          * Load Image URL Using Glide
          */
-        glideImageView.loadGlideImage(
+        glide_image_avatar.loadGlideImage(
             "https://crackberry.com/sites/crackberry.com" +
                     "/files/topic_images/2013/ANDROID.png", R.drawable.ic_launcher_background
         )
@@ -67,6 +68,16 @@ class HomeActivity : BaseActivity() {
 
     override fun onNetworkConnectionChanged(isConnected: Boolean) {
         super.onNetworkConnectionChanged(isConnected)
-        if (isConnected) hello_world.text = "You are Online !!!" else hello_world.text = "You are Offline !!!"
+        if (isConnected) {
+            hello_world.text = "You are Online !!!"
+            hello_world.visibility = View.VISIBLE
+            glide_image_avatar.visibility = View.VISIBLE
+            no_network.visibility = View.GONE
+        } else {
+            hello_world.text = "You are Offline !!!"
+            hello_world.visibility = View.GONE
+            glide_image_avatar.visibility = View.GONE
+            no_network.visibility = View.VISIBLE
+        }
     }
 }
