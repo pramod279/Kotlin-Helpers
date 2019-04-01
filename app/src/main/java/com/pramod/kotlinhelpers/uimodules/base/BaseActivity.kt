@@ -4,7 +4,7 @@ import android.app.ProgressDialog
 import android.content.IntentFilter
 import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
-import com.pramod.kotlinhelpers.common.utils.NetworkReceiver
+import com.pramod.kotlinhelpers.common.receivers.NetworkReceiver
 import com.pramod.kotlinhelpers.common.utils.ProgressIndicator
 import com.pramod.kotlinhelpers.common.utils.Toaster.showShortToast
 

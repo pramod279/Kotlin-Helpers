@@ -1,4 +1,4 @@
-package com.pramod.kotlinhelpers.common.utils
+package com.pramod.kotlinhelpers.common.receivers
 
 import android.content.BroadcastReceiver
 import android.content.Context
