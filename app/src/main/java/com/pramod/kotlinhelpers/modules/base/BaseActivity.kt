@@ -1,18 +1,19 @@
 package com.pramod.kotlinhelpers.modules.base
 
 import android.annotation.SuppressLint
-import android.app.ProgressDialog
 import android.content.IntentFilter
 import android.net.ConnectivityManager
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.pramod.kotlinhelpers.R
 import com.pramod.kotlinhelpers.common.receivers.NetworkReceiver
-import com.pramod.kotlinhelpers.common.utils.ProgressIndicator
 import com.pramod.kotlinhelpers.common.utils.Toaster.showShortToast
+import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
+import kotlinx.android.synthetic.main.progress_indicator.*
 
 /**
  * Created by PRAMOD SELVARAJ on 25-03-2019.
@@ -22,7 +23,6 @@ import kotlinx.android.synthetic.main.layout_toolbar.*
 
 abstract class BaseActivity : AppCompatActivity(), BaseViews, NetworkReceiver.ConnectivityReceiverListener {
     private var networkReceiver = NetworkReceiver()
-    private var progressDialog: ProgressDialog? = null
 
     @SuppressLint("InflateParams")
     override fun setContentView(layoutResID: Int) {
@@ -81,13 +81,15 @@ abstract class BaseActivity : AppCompatActivity(), BaseViews, NetworkReceiver.Co
      */
     override fun showProgress() {
         hideProgress()
-        progressDialog = ProgressIndicator.showLoadingIndicator(this)
+        lyt_progress_indicator.visibility = View.VISIBLE
+        layout_container.visibility = View.GONE
     }
 
     /**
      * Dismiss Progress Dialog
      */
     override fun hideProgress() {
-        progressDialog?.let { if (it.isShowing) it.cancel() }
+        lyt_progress_indicator.visibility = View.GONE
+        layout_container.visibility = View.VISIBLE
     }
 }

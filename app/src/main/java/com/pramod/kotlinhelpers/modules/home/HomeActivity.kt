@@ -1,6 +1,7 @@
 package com.pramod.kotlinhelpers.modules.home
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.pramod.kotlinhelpers.R
@@ -44,7 +45,15 @@ class HomeActivity : BaseActivity() {
         /**
          * Hide Progress Indicator
          */
-        //hideProgress()
+        Handler().apply {
+            val runnable = object : Runnable {
+                override fun run() {
+                    hideProgress()
+                    postDelayed(this, 3000)
+                }
+            }
+            postDelayed(runnable, 3000)
+        }
 
         /**
          * Load Image URL Using Glide
