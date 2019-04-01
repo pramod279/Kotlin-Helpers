@@ -1,4 +1,4 @@
-package com.pramod.kotlinhelpers.modules.base
+package com.pramod.kotlinhelpers.uimodules.base
 
 /**
  * Created by PRAMOD SELVARAJ on 25-03-2019.

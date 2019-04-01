@@ -1,14 +1,14 @@
-package com.pramod.kotlinhelpers.modules.home
+package com.pramod.kotlinhelpers.uimodules.home
 
 import android.os.Bundle
 import android.view.View
 import com.pramod.kotlinhelpers.R
-import com.pramod.kotlinhelpers.common.constants.PreferenceConstants
-import com.pramod.kotlinhelpers.common.utils.PreferenceStorage
+import com.pramod.kotlinhelpers.common.data.preferences.PreferenceConstants
+import com.pramod.kotlinhelpers.common.data.preferences.PreferenceStorage
 import com.pramod.kotlinhelpers.common.utils.Toaster.showShortToast
 import com.pramod.kotlinhelpers.common.utils.loadGlideImage
 import com.pramod.kotlinhelpers.common.utils.loggerD
-import com.pramod.kotlinhelpers.modules.base.BaseActivity
+import com.pramod.kotlinhelpers.uimodules.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**

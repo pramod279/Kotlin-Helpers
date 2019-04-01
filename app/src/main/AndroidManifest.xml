@@ -21,7 +21,7 @@
                 android:value="27ce137ecef877af637f2fb19d862efb6c2d9d37"/>
 
         <!--Activities-->
-        <activity android:name=".modules.home.HomeActivity">
+        <activity android:name=".uimodules.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

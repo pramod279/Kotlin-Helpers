@@ -1,4 +1,4 @@
-package com.pramod.kotlinhelpers.common.utils
+package com.pramod.kotlinhelpers.common.data.preferences
 
 import android.content.Context
 import android.content.SharedPreferences

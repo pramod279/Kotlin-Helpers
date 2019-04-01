@@ -1,4 +1,4 @@
-package com.pramod.kotlinhelpers.modules.base
+package com.pramod.kotlinhelpers.uimodules.base
 
 import android.app.ProgressDialog
 import android.content.IntentFilter

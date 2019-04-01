@@ -1,4 +1,4 @@
-package com.pramod.kotlinhelpers.common.constants
+package com.pramod.kotlinhelpers.common.data.preferences
 
 /**
  * Created by PRAMOD SELVARAJ on 25-03-2019.
