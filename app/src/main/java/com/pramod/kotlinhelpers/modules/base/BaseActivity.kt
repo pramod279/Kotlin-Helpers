@@ -5,6 +5,7 @@ import android.app.ProgressDialog
 import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.widget.FrameLayout
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.pramod.kotlinhelpers.R
@@ -66,6 +67,13 @@ abstract class BaseActivity : AppCompatActivity(), BaseViews, NetworkReceiver.Co
      */
     override fun setToolBarTitle(toolbarTitle: String) {
         toolbar_title.text = toolbarTitle
+    }
+
+    /**
+     * Toolbar Controller
+     */
+    override fun leftToolbarController(): ImageButton {
+        return toolbar_left_controller
     }
 
     /**

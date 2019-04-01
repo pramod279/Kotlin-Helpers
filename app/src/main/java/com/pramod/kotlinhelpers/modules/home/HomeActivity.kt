@@ -2,6 +2,7 @@ package com.pramod.kotlinhelpers.modules.home
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
 import com.pramod.kotlinhelpers.R
 import com.pramod.kotlinhelpers.common.data.preferences.PreferenceConstants
 import com.pramod.kotlinhelpers.common.data.preferences.PreferenceStorage
@@ -26,6 +27,14 @@ class HomeActivity : BaseActivity() {
          * Set Toolbar Title
          */
         setToolBarTitle("Hello World !!!")
+
+        /**
+         * Toolbar Left Controller Action
+         */
+        leftToolbarController().setImageDrawable(ContextCompat.getDrawable(this, R.drawable.academy_ic_left_arrow))
+        leftToolbarController().setOnClickListener {
+            finish()
+        }
 
         /**
          * Show Progress Indicator

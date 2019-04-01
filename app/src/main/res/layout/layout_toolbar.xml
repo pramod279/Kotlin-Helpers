@@ -6,11 +6,10 @@
         android:layout_height="match_parent">
 
     <ImageButton
-            android:id="@+id/image_back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_left_controller"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_centerVertical="true"
-            android:layout_marginStart="16dp"
             android:background="@android:color/transparent"/>
 
     <TextView
@@ -19,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="24dp"
-            android:layout_toEndOf="@id/image_back_button"
+            android:layout_toEndOf="@id/toolbar_left_controller"
             android:textSize="20sp"
             tools:text="Screen Title"/>
 
