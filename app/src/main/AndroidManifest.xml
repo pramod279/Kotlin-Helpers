@@ -13,7 +13,8 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
 
         <!--Crashlytics Meta Data-->
         <meta-data
@@ -21,7 +22,7 @@
                 android:value="27ce137ecef877af637f2fb19d862efb6c2d9d37"/>
 
         <!--Activities-->
-        <activity android:name=".uimodules.home.HomeActivity">
+        <activity android:name=".modules.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

@@ -1,4 +1,4 @@
-package com.pramod.kotlinhelpers.uimodules.home
+package com.pramod.kotlinhelpers.modules.home
 
 import android.os.Bundle
 import android.view.View
@@ -8,7 +8,7 @@ import com.pramod.kotlinhelpers.common.data.preferences.PreferenceStorage
 import com.pramod.kotlinhelpers.common.utils.Toaster.showShortToast
 import com.pramod.kotlinhelpers.common.utils.loadGlideImage
 import com.pramod.kotlinhelpers.common.utils.loggerD
-import com.pramod.kotlinhelpers.uimodules.base.BaseActivity
+import com.pramod.kotlinhelpers.modules.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -21,6 +21,11 @@ class HomeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        /**
+         * Set Toolbar Title
+         */
+        setToolBarTitle("Hello World !!!")
 
         /**
          * Show Progress Indicator

@@ -1,12 +1,17 @@
-package com.pramod.kotlinhelpers.uimodules.base
+package com.pramod.kotlinhelpers.modules.base
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.IntentFilter
 import android.net.ConnectivityManager
+import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import com.pramod.kotlinhelpers.R
 import com.pramod.kotlinhelpers.common.receivers.NetworkReceiver
 import com.pramod.kotlinhelpers.common.utils.ProgressIndicator
 import com.pramod.kotlinhelpers.common.utils.Toaster.showShortToast
+import kotlinx.android.synthetic.main.layout_toolbar.*
 
 /**
  * Created by PRAMOD SELVARAJ on 25-03-2019.
@@ -17,6 +22,15 @@ import com.pramod.kotlinhelpers.common.utils.Toaster.showShortToast
 abstract class BaseActivity : AppCompatActivity(), BaseViews, NetworkReceiver.ConnectivityReceiverListener {
     private var networkReceiver = NetworkReceiver()
     private var progressDialog: ProgressDialog? = null
+
+    @SuppressLint("InflateParams")
+    override fun setContentView(layoutResID: Int) {
+        val baseLayout: CoordinatorLayout =
+            layoutInflater.inflate(R.layout.activity_base, null) as CoordinatorLayout
+        val baseContainer: FrameLayout = baseLayout.findViewById(R.id.layout_container)
+        layoutInflater.inflate(layoutResID, baseContainer, true)
+        super.setContentView(baseLayout)
+    }
 
     override fun onResume() {
         super.onResume()
@@ -45,6 +59,13 @@ abstract class BaseActivity : AppCompatActivity(), BaseViews, NetworkReceiver.Co
      */
     private fun isOnline(isConnected: Boolean) {
         return if (isConnected) showShortToast("You are Online !!!") else showShortToast("You are Offline !!!")
+    }
+
+    /**
+     * Set Toolbar Title
+     */
+    override fun setToolBarTitle(toolbarTitle: String) {
+        toolbar_title.text = toolbarTitle
     }
 
     /**

@@ -10,3 +10,5 @@ Kotlin Helper Classes
 7) Firebase Crashlytics
 8) Gradle Setup & Flavouring
 9) Glide Image Loader
+10) Signed APK
+11) Common Toolbar

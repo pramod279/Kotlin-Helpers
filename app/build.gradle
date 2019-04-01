@@ -76,6 +76,7 @@ dependencies {
     /*KTK Library*/
     implementation(deps.androidKTX.KTX)
     /*Support Library Declarations*/
+    implementation(deps.android_x.design)
     implementation(deps.android_x.appcompat)
     implementation(deps.android_x.recyclerview)
     implementation(deps.android_x.cardview)
