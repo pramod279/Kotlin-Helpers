@@ -12,3 +12,4 @@ Kotlin Helper Classes
 9) Glide Image Loader
 10) Signed APK
 11) Common Toolbar
+12) App Center Release Management
