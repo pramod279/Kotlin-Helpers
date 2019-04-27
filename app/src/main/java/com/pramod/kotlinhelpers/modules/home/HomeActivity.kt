@@ -4,9 +4,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import androidx.core.content.ContextCompat
-import com.microsoft.appcenter.AppCenter
-import com.microsoft.appcenter.analytics.Analytics
-import com.microsoft.appcenter.crashes.Crashes
 import com.pramod.kotlinhelpers.R
 import com.pramod.kotlinhelpers.common.data.preferences.PreferenceConstants
 import com.pramod.kotlinhelpers.common.data.preferences.PreferenceStorage
@@ -26,12 +23,6 @@ class HomeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        /*Initialise App Center*/
-        AppCenter.start(
-            application, "96300662-99d0-47eb-b7e3-fdcac7702da7",
-            Analytics::class.java, Crashes::class.java
-        )
 
         /**
          * Set Toolbar Title
