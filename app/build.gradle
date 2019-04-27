@@ -75,6 +75,9 @@ dependencies {
     implementation(deps.kotlin.kotlin)
     /*KTK Library*/
     implementation(deps.androidKTX.KTX)
+    /*App Center Library*/
+    implementation(deps.appCenter.analytics)
+    implementation(deps.appCenter.crashes)
     /*Support Library Declarations*/
     implementation(deps.android_x.design)
     implementation(deps.android_x.appcompat)

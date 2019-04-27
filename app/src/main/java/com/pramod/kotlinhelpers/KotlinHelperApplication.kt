@@ -2,8 +2,12 @@ package com.pramod.kotlinhelpers
 
 import android.app.Application
 import com.crashlytics.android.Crashlytics
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 import com.pramod.kotlinhelpers.common.data.preferences.PreferenceStorage
 import io.fabric.sdk.android.Fabric
+
 
 /**
  * Created by PRAMOD SELVARAJ on 25-03-2019.
