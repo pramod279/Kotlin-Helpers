@@ -31,7 +31,7 @@ class HomeActivity : BaseActivity() {
          * Initialise App Center
          */
         AppCenter.start(
-            application, "a3a8f9aa-f019-4bdd-8aee-6acc3c631ee1",
+            application, "a03f1275-d2f6-4fe4-964d-14489fcfa87c",
             Analytics::class.java, Crashes::class.java
         )
 
