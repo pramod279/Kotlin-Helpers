@@ -16,20 +16,20 @@ app_info.applicationName = "Kotlin-Helper"
 /**
  * Debug Build Version Information
  */
-app_info.debug_version_code = 1
-app_info.debug_version_name = "1.0"
+app_info.debug_version_code = 2
+app_info.debug_version_name = "1.1"
 
 /**
  * QA Build Version Information
  */
-app_info.qa_version_code = 1
-app_info.qa_version_name = "1.0"
+app_info.qa_version_code = 2
+app_info.qa_version_name = "1.1"
 
 /**
  * Release Build Version Information
  */
-app_info.release_version_code = 1
-app_info.release_version_name = "1.0"
+app_info.release_version_code = 2
+app_info.release_version_name = "1.1"
 
 ext.app_info = app_info
 
